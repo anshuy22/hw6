@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', async function(event) {
             if(watchedMovies[j].data()){
             let movId=watchedMovies[j].data()
             let m= movId.text
-          let p= movId.path
+          
      if(movieId==m){
           document.querySelector(`.movies-${m}`).classList.add('opacity-20')   }
             
