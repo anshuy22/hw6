@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', async function(event) {
    let  url='https://api.themoviedb.org/3/movie/now_playing?api_key=31d3aa3e7d70dc0219a4a979955702e7&language=en-US'
    let response = await fetch(url)
    let movies= await response.json()
-   console.log(movies)
+console.log(movies)
 
     // ⬆️ ⬆️ ⬆️ 
     // End Step 1
@@ -92,7 +92,7 @@ event.preventDefault()
 if(document.querySelector(`.movies-${movieId}`).classList.contains('opacity-20')){
         event.preventDefault()
     document.querySelector(`.movies-${movieId}`).classList.remove('opacity-20') 
-    await db.collection('watched-tmdb').doc(`movies-${movieId}`).delete()
+    await db.collection('watched-tmdb').doc(`.movies-${movieId}`).delete()
 
 }else{
 
